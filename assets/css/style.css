@@ -1,3 +1,16 @@
 /* When I click one of the header links, the UI 'scrolls' to the corresponding section */
 
 /* Responsive Layout that addapts to my viewport when screen resolution is changed */
+
+
+/* Variables - Colors */
+:root {
+    --white: ;
+    --darkGrey: ;
+    --lightGrey: ;
+    --tealGrey: ;
+}
+
+.horizontal-list {
+
+}
