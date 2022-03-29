@@ -1,16 +1,74 @@
 /* When I click one of the header links, the UI 'scrolls' to the corresponding section */
 
-/* Responsive Layout that addapts to my viewport when screen resolution is changed */
-
+html {
+    scroll-behavior: smooth;
+}
 
 /* Variables - Colors */
 :root {
-    --white: ;
-    --darkGrey: ;
-    --lightGrey: ;
-    --tealGrey: ;
+    --white: #eeeef7;
+    --darkGrey: #31343d;
+    --blueGrey: #445876;
+    --tealGrey: #92cbce;
 }
 
-.horizontal-list {
+/* Header Main*/
+.header-author {
 
+}
+
+.header-avatar {
+
+}
+
+.header-nav {
+
+}
+
+.header-subtitle {
+
+}
+
+/* Main */
+/* Main - Section Layout */
+.mainLayout {
+
+}
+/* Main - About Me */
+.mainAboutMe {
+
+}
+/* Main - Work Boxes */
+.boxLayout {
+
+}
+
+.boxStyle {
+
+}
+/* First Application larger in size than others */
+.firstBox {
+
+}
+
+
+
+
+/* Animation */
+/* Fills nav tab from bottom up */
+.fillBottomUp {
+
+}
+
+/* Resize - Responsive View */
+/* Responsive Layout that addapts to my viewport when screen resolution is changed */
+@media screen and (max-width: 768px) {
+    main, nav {
+      /* flex-direction: column; */
+    }
+  }
+
+/* Non-specific classes */
+.horizontalList {
+    text-decoration: underline;
 }
