@@ -1,57 +1,142 @@
 /* When I click one of the header links, the UI 'scrolls' to the corresponding section */
-
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: var(--white);
+}
+
+a {
+    color: var(--black);
+}
+
 /* Variables - Colors */
 :root {
-    --white: #eeeef7;
+    --white: #fff;
+    --black: #000000;
     --darkGrey: #31343d;
     --blueGrey: #445876;
     --tealGrey: #92cbce;
 }
 
-/* Header Main*/
-.header-author {
-
+/* Header*/
+.header {
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--darkGrey);
+}
+/* Header - Author color and location */
+.header h1 {
+    display: inline-block;
+    font-size: 40px;
+    background-color: var(--tealGrey);
+    color: var(--darkGrey);
+    padding-left: 5%;
+    padding-right: 2%;
 }
 
-.header-avatar {
-
+.header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
 }
 
-.header-nav {
-
+.header nav ul li a {
+    color: var(--tealGrey);
 }
 
-.header-subtitle {
+/* Hero Image */
+.hero {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/pexels-photo-hero.png");
+    background-size: cover;
+    background-position: center;
+    /* background-color: var(--darkGrey);
+    padding: 2px; */
+}
 
+/* sets size and position of avatar */
+.headerAvatar {
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    right: 100px;
+    border: 10px solid var(--darkGrey); 
+    background-color: #000000;
+    padding: 1px;
 }
 
 /* Main */
-/* Main - Section Layout */
+/* Main - layout */
 .mainLayout {
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
 
+}
+
+/* Main - section layout */
+.mainLayout section {
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+.mainLayout section h1{
+    height: auto;
+    width: 150px;
+    margin-right: 20px;
+    border-right: 7px solid var(--blueGrey);
+    padding: 10px;
+    font-size: 200%;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mainLayout section div {
+    /* display: inline-block; */
+    width: 900px;
 }
 /* Main - About Me */
-.mainAboutMe {
-
+.mainAboutMe div p {
+    flex-wrap: wrap;
+    width: 100%;
 }
 /* Main - Work Boxes */
-.boxLayout {
+.boxLayout div {
 
+    flex: 0 0 300px;
+    margin: 20px;
 }
 
-.boxStyle {
-
-}
 /* First Application larger in size than others */
 .firstBox {
-
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--tealGrey);
 }
 
-
+.subBoxes {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
 
 
 /* Animation */
@@ -69,6 +154,12 @@ html {
   }
 
 /* Non-specific classes */
+/* Creates Horizontal Lists under <ul>*/
 .horizontalList {
+    list-style-type: none;
+}
+.horizontalList li {
+    display: inline-block;
+    margin-left: 25px;
     text-decoration: underline;
 }
