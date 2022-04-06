@@ -1,7 +1,7 @@
 /* When I click one of the header links, the UI 'scrolls' to the corresponding section */
 * {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 html {
     scroll-behavior: smooth;
@@ -9,7 +9,8 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -31,7 +32,7 @@ a {
 
 /* Header*/
 .header {
-    padding: 0px;
+    padding-bottom: 28px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--darkGrey);
 }
@@ -41,16 +42,29 @@ a {
     font-size: 40px;
     background-color: var(--tealGrey);
     color: var(--darkGrey);
-    padding-left: 5%;
-    padding-right: 2%;
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .header nav {
-    padding-top: 15px;
-    margin-right: 20px;
     float: right;
     font-size: 20px;
+    margin-right: 10px;
     display: flex;
+}
+
+.header nav ul {
+    padding: 0;
+    margin: 0;
+    /* display: flex; */
+}
+
+.header nav ul li {
+display:inline-flex;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
 .header nav ul li a {
@@ -65,21 +79,19 @@ a {
     background-image: url("../images/pexels-photo-hero.png");
     background-size: cover;
     background-position: center;
-    /* background-color: var(--darkGrey);
-    padding: 2px; */
 }
 
 /* sets size and position of avatar */
 .headerAvatar {
     height: 150px;
     width: 200px;
-    position: absolute;
-    z-index: 1;
-    top: 300px;
-    right: 100px;
+    position: sticky;
+    z-index: 2;
+    top: 10px;
+    float: right;
     border: 10px solid var(--darkGrey); 
     background-color: #000000;
-    padding: 1px;
+    object-fit: contain;
 }
 
 /* Main */
@@ -184,8 +196,10 @@ a {
 
 /* Contact Me */
 .contactMe ul {
-    justify-content: space-evenly;
-    width: 1000px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
 }
 .contactMe ul li {
     font-size: 120%;
@@ -198,11 +212,25 @@ a {
 /* Resize - Responsive View */
 /* Responsive Layout that addapts to my viewport when screen resolution is changed - Unable to complete - May follow up with tutor */
 @media screen and (max-width: 768px) {
-    header, main {
-      flex-direction: column;
+    body {
+        align-content: center;
+    }
+    header {
+        flex-flow: wrap;
     }
     * {
         color:pink;
+    }
+
+    .header h1 {
+        display: block;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .header nav {
+        float:none;
+        justify-content: center;
+        display: flex;
     }
   }
 
